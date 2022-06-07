@@ -7,9 +7,9 @@ modId="ironbows"
 version="1.18.2-1.0"
 displayName="Iron Bows"
 displayURL="https://github.com/mpbb/ironbows"
-logoFile="ironbows.png"
+logoFile="icon.png"
 credits="Popcornman200, lucam, Mr.Bananas"
 authors="Popcornman200"
 description='''
-This mod adds tiered bows. Iron, Golden, Diamond, Emerald and Netherite
+This mod adds new and superior bows. Iron, Golden, Diamond, Emerald and Netherite. Each bow has differences in durability and damage.
 '''
