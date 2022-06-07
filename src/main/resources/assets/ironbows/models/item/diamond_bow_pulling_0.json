@@ -1,0 +1,6 @@
+{
+    "parent": "ironbows:item/diamond_bow",
+    "textures": {
+        "layer0": "ironbows:item/diamond_bow_pulling_0"
+    }
+}

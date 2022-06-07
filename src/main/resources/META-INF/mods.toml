@@ -1,0 +1,15 @@
+modLoader="javafml"
+loaderVersion="[40,)"
+license="MIT License"
+issueTrackerURL="https://github.com/mpbb/ironbows/issues" #optional
+[[mods]]
+modId="ironbows"
+version="${file.jarVersion}"
+displayName="Iron Bows"
+displayURL="https://github.com/mpbb/ironbows"
+logoFile="ironbows.png"
+credits="Popcornman200, lucam, Mr.Bananas"
+authors="Popcornman200"
+description='''
+This mod adds tiered bows. Iron, Golden, Diamond, Emerald and Netherite
+'''

@@ -1,0 +1,25 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        " a ",
+        "ab ",
+        " a "
+    ],
+    "key":
+    {
+        "a":
+        {
+            "item": "minecraft:diamond"
+        },
+        "b":
+        {
+            "item": "minecraft:bow"
+        }
+    },
+    "result":
+    {
+        "item": "ironbows:diamond_bow",
+        "count": 1
+    }
+}
