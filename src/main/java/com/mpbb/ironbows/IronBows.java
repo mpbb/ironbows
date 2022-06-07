@@ -4,19 +4,22 @@ import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.resources.ResourceLocation;
 
 import com.mpbb.ironbows.item.Items;
-import net.minecraftforge.common.MinecraftForge;
+
+import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
+import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
 @Mod("ironbows")
 public class IronBows
 {
 	public static final String MODID = "ironbows";
+	public static final IEventBus EVENT_BUS = FMLJavaModLoadingContext.get().getModEventBus();
 
     public IronBows()
     {
-    	MinecraftForge.EVENT_BUS.addListener(this::setup);
-        Items.BOWS.register(MinecraftForge.EVENT_BUS);
+    	EVENT_BUS.addListener(this::setup);
+        Items.BOWS.register(EVENT_BUS);
     }
     
     private void setup(final FMLClientSetupEvent event)
