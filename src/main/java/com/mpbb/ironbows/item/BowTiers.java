@@ -14,13 +14,13 @@ public enum BowTiers implements BowTier {
 	   GOLDEN(576, 1.5f, 2, () -> {
 		      return Ingredient.of(Items.GOLD_INGOT);
 		   }),
-	   DIAMOND(1920, 2.0f, 2, () -> {
+	   DIAMOND(1920, 2.5f, 2, () -> {
 	      return Ingredient.of(Items.DIAMOND);
 	   }),
-	   EMERALD(2304, 2.5f, 2, () -> {
+	   EMERALD(2304, 3.0f, 2, () -> {
 		      return Ingredient.of(Items.EMERALD);
 		   }),
-	   NETHERITE(3072, 4.0f, 2, () -> {
+	   NETHERITE(3456, 5.0f, 2, () -> {
 	      return Ingredient.of(Items.NETHERITE_INGOT);
 	   });
 

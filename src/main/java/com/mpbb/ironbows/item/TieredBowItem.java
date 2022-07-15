@@ -37,11 +37,9 @@ public class TieredBowItem extends BowItem {
 	
 	@Override
 	public void appendHoverText(ItemStack p_41421_, Level p_41422_, List<Component> p_41423_, TooltipFlag p_41424_) {
-		p_41423_.add(Component.literal(""));
 		p_41423_.add(Component.literal("+" + Float.toString(this.tier.getAttackDamageBonus()) + " ")
 				.append(Component.translatable("item.ironbows.damage_tooltip"))
-				.withStyle(ChatFormatting.AQUA));
+				.withStyle(ChatFormatting.DARK_GREEN));
+		super.appendHoverText(p_41421_, p_41422_, p_41423_, p_41424_);
 	}
-	
-	
 }

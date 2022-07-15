@@ -4,5 +4,5 @@
 	"item.ironbows.diamond_bow": "Diamond Bow",
 	"item.ironbows.emerald_bow": "Emerald Bow",
 	"item.ironbows.netherite_bow": "Netherite Bow",
-	"item.ironbows.damage_tooltip": "Bonus Damage"
+	"item.ironbows.damage_tooltip": "Projectile Damage"
 }
