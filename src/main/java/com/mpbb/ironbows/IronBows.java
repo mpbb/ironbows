@@ -12,7 +12,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.minecraftforge.client.event.FOVModifierEvent;
+import net.minecraftforge.client.event.ComputeFovModifierEvent;
 import net.minecraftforge.common.MinecraftForge;
 
 @Mod("ironbows")
@@ -49,7 +49,7 @@ public class IronBows
     }
     
     @SubscribeEvent
-    public void onFOVUpdate(FOVModifierEvent event)
+    public void onFOVUpdate(ComputeFovModifierEvent event)
     {
     	LivingEntity player = event.getPlayer();
     	Item item = player.getUseItem().getItem();
@@ -61,7 +61,7 @@ public class IronBows
         	else {
         		FOVModifier *= FOVModifier;
         	}
-        	event.setNewFov(event.getNewFov() * (1.0f - FOVModifier * 0.15f));
+        	event.setNewFovModifier(event.getNewFovModifier() * (1.0f - FOVModifier * 0.15f));
         }
     }
 }
