@@ -2,24 +2,32 @@ package com.mpbb.ironbows;
 
 import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.resources.ResourceLocation;
-
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.item.Item;
 import com.mpbb.ironbows.item.Items;
+import com.mpbb.ironbows.item.TieredBowItem;
 
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.client.event.FOVModifierEvent;
+import net.minecraftforge.common.MinecraftForge;
 
 @Mod("ironbows")
 public class IronBows
 {
 	public static final String MODID = "ironbows";
-	public static final IEventBus EVENT_BUS = FMLJavaModLoadingContext.get().getModEventBus();
+	private static final IEventBus MOD_EVENT_BUS = FMLJavaModLoadingContext.get().getModEventBus();
+	private static final IEventBus EVENT_BUS = MinecraftForge.EVENT_BUS;
 
     public IronBows()
     {
-    	EVENT_BUS.addListener(this::setup);
-        Items.BOWS.register(EVENT_BUS);
+    	MOD_EVENT_BUS.addListener(this::setup);
+        Items.BOWS.register(MOD_EVENT_BUS);
+        
+        EVENT_BUS.register(this);
     }
     
     private void setup(final FMLClientSetupEvent event)
@@ -38,5 +46,22 @@ public class IronBows
              });
     	});
       });
+    }
+    
+    @SubscribeEvent
+    public void onFOVUpdate(FOVModifierEvent event)
+    {
+    	LivingEntity player = event.getPlayer();
+    	Item item = player.getUseItem().getItem();
+        if(item instanceof TieredBowItem) {
+        	float FOVModifier = player.getTicksUsingItem() / (float)TieredBowItem.MAX_DRAW_DURATION;
+        	if (FOVModifier > 1.0f) {
+        		FOVModifier = 1.0f;
+        	}
+        	else {
+        		FOVModifier *= FOVModifier;
+        	}
+        	event.setNewFov(event.getNewFov() * (1.0f - FOVModifier * 0.15f));
+        }
     }
 }

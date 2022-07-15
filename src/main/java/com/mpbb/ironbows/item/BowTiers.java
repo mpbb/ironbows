@@ -8,19 +8,19 @@ import net.minecraft.world.item.crafting.Ingredient;
 
 public enum BowTiers implements BowTier {
 
-	   IRON(576, 0.5f, 1, () -> {
+	   IRON(768, 1.0f, 1, () -> {
 	      return Ingredient.of(Items.IRON_INGOT);
 	   }),
-	   GOLDEN(192, 1.0f, 2, () -> {
+	   GOLDEN(576, 1.5f, 2, () -> {
 		      return Ingredient.of(Items.GOLD_INGOT);
 		   }),
-	   DIAMOND(1536, 1.0f, 2, () -> {
+	   DIAMOND(1920, 2.0f, 2, () -> {
 	      return Ingredient.of(Items.DIAMOND);
 	   }),
-	   EMERALD(2304, 1.5f, 2, () -> {
+	   EMERALD(2304, 2.5f, 2, () -> {
 		      return Ingredient.of(Items.EMERALD);
 		   }),
-	   NETHERITE(3072, 2.5f, 2, () -> {
+	   NETHERITE(3072, 4.0f, 2, () -> {
 	      return Ingredient.of(Items.NETHERITE_INGOT);
 	   });
 
