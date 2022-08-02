@@ -27,7 +27,7 @@ public class TieredBowItem extends BowItem {
 	
 	@Override
 	public int getEnchantmentValue() {
-		return super.getEnchantmentValue();
+		return this.tier.getEnchantmentValue();
 	}
 	
 	@Override
