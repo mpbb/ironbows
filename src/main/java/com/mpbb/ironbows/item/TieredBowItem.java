@@ -9,7 +9,6 @@ import net.minecraft.world.item.BowItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
-import net.minecraftforge.items.wrapper.PlayerOffhandInvWrapper;
 
 public class TieredBowItem extends BowItem {
 	private final BowTier tier;
