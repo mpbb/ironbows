@@ -10,27 +10,23 @@ import com.mpbb.ironbows.item.TieredBowItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.client.event.ComputeFovModifierEvent;
-import net.minecraftforge.common.MinecraftForge;
 
 @Mod("ironbows")
 public class IronBows
 {
 	public static final String MODID = "ironbows";
 	private static final IEventBus MOD_EVENT_BUS = FMLJavaModLoadingContext.get().getModEventBus();
-	private static final IEventBus EVENT_BUS = MinecraftForge.EVENT_BUS;
 
     public IronBows()
     {
     	MOD_EVENT_BUS.addListener(this::setup);
         Items.BOWS.register(MOD_EVENT_BUS);
-        
-        EVENT_BUS.register(this);
     }
     
-    private void setup(final FMLClientSetupEvent event)
+    private void setup(final FMLCommonSetupEvent event)
     {
         event.enqueueWork(() -> {
     	Items.BOWS.getEntries().forEach(item -> {

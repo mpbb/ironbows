@@ -4,7 +4,7 @@ license="MIT License"
 issueTrackerURL="https://github.com/mpbb/ironbows/issues" #optional
 [[mods]]
 modId="ironbows"
-version="1.19.2-1.2"
+version="1.19.2-1.3"
 displayName="Iron Bows"
 displayURL="https://github.com/mpbb/ironbows"
 logoFile="icon.png"
