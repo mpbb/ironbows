@@ -33,7 +33,7 @@ public enum BowTiers implements BowTier {
 	      this.uses = uses;
 	      this.damage = damage;
 	      this.enchantmentValue = enchantmentValue;
-	      this.repairIngredient = new LazyLoadedValue<>(repairIngredient);
+	      this.repairIngredient = new LazyLoadedValue<Ingredient>(repairIngredient);
 	   }
 
 	   public int getUses() {
