@@ -15,7 +15,6 @@ public class ModClient {
 	@SubscribeEvent
     public static void setup(final FMLClientSetupEvent event)
     {
-		System.out.println("SHIT");
         event.enqueueWork(() -> {
     	Items.BOWS.getEntries().forEach(item -> {
     		ItemProperties.register(item.get(), new ResourceLocation("pull"), (p_174635_, p_174636_, p_174637_, p_174638_) -> {
