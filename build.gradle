@@ -4,7 +4,7 @@ plugins {
     id 'net.minecraftforge.gradle' version '5.1.+'
 }
 
-version = '1.19.2-1.3'
+version = '1.4-FORGE-1.19.2'
 group = 'com.mpbb.ironbows' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'ironbows'
 
@@ -150,7 +150,7 @@ jar {
         attributes([
                 "Specification-Title"     : "ironbows",
                 "Specification-Vendor"    : "mpbb",
-                "Specification-Version"   : "1.19.2-1.3",
+                "Specification-Version"   : "1.4-FORGE-1.19.2",
                 "Implementation-Title"    : project.name,
                 "Implementation-Version"  : project.jar.archiveVersion,
                 "Implementation-Vendor"   : "mpbb",
