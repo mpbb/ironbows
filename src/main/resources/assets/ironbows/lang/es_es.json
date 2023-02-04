@@ -1,0 +1,8 @@
+{
+	"item.ironbows.iron_bow": "Arco de Hierro",
+	"item.ironbows.golden_bow": "Arco de Oro",
+	"item.ironbows.diamond_bow": "Arco de Diamante",
+	"item.ironbows.emerald_bow": "Arco de Esmeralda",
+	"item.ironbows.netherite_bow": "Arco de Netherita",
+	"item.ironbows.damage_tooltip": "Daño del Projectil"
+}
