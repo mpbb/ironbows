@@ -11,7 +11,7 @@ public enum BowTiers implements BowTier {
 	   IRON(768, 1.0f, 1, () -> {
 	      return Ingredient.of(Items.IRON_INGOT);
 	   }),
-	   GOLDEN(576, 1.5f, 2, () -> {
+	   GOLD(576, 1.5f, 2, () -> {
 		      return Ingredient.of(Items.GOLD_INGOT);
 		   }),
 	   DIAMOND(1920, 2.5f, 2, () -> {

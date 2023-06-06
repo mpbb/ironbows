@@ -1,10 +1,10 @@
 modLoader="javafml"
-loaderVersion="[44,)"
+loaderVersion="[45,)"
 license="MIT License"
 issueTrackerURL="https://github.com/mpbb/ironbows/issues" #optional
 [[mods]]
 modId="ironbows"
-version="1.5-FORGE-1.19.3"
+version="1.19.4-1.6-FORGE"
 displayName="Iron Bows (Forge)"
 displayURL="https://github.com/mpbb/ironbows"
 logoFile="icon.png"
