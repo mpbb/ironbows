@@ -4,28 +4,21 @@ import java.util.List;
 
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
-import net.minecraft.world.entity.projectile.AbstractArrow;
-import net.minecraft.world.item.BowItem;
+import net.minecraft.world.item.CrossbowItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
 
-public class TieredBowItem extends BowItem {
+public class TieredCrossbowItem extends CrossbowItem {
 	private final BowTier tier;
 
-	public TieredBowItem(BowTier tier, Properties properties) {
+	public TieredCrossbowItem(BowTier tier, Properties properties) {
 		super(properties.durability(tier.getUses()));
 		this.tier = tier;
 	}
 	
 	public BowTier getTier() {
 		return this.tier;
-	}
-
-	@Override
-	public AbstractArrow customArrow(AbstractArrow arrow) {
-		arrow.setBaseDamage(arrow.getBaseDamage() + this.tier.getAttackDamageBonus());
-		return arrow;
 	}
 	
 	@Override

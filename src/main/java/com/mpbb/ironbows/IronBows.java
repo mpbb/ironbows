@@ -18,6 +18,7 @@ public class IronBows
     {
     	EVENT_BUS.register(this);
         Items.BOWS.register(MOD_EVENT_BUS);
+        Items.CROSSBOWS.register(MOD_EVENT_BUS);
     }
     
 

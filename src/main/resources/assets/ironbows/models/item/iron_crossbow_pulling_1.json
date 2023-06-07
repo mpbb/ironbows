@@ -1,0 +1,6 @@
+{
+    "parent": "ironbows:item/iron_crossbow",
+    "textures": {
+        "layer0": "ironbows:item/iron_crossbow_pulling_1"
+    }
+}

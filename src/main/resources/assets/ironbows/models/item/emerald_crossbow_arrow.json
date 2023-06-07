@@ -1,0 +1,6 @@
+{
+    "parent": "ironbows:item/emerald_crossbow",
+    "textures": {
+        "layer0": "ironbows:item/emerald_crossbow_arrow"
+    }
+}

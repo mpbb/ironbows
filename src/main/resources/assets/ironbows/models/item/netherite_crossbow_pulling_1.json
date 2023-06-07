@@ -1,0 +1,6 @@
+{
+    "parent": "ironbows:item/netherite_crossbow",
+    "textures": {
+        "layer0": "ironbows:item/netherite_crossbow_pulling_1"
+    }
+}

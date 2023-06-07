@@ -4,5 +4,11 @@
 	"item.ironbows.diamond_bow": "Diamond Bow",
 	"item.ironbows.emerald_bow": "Emerald Bow",
 	"item.ironbows.netherite_bow": "Netherite Bow",
-	"item.ironbows.damage_tooltip": "Projectile Damage"
+	"item.ironbows.damage_tooltip": "Projectile Damage",
+	
+	"item.ironbows.iron_crossbow": "Iron Crossbow",
+	"item.ironbows.golden_crossbow": "Golden Crossbow",
+	"item.ironbows.diamond_crossbow": "Diamond Crossbow",
+	"item.ironbows.emerald_crossbow": "Emerald Crossbow",
+	"item.ironbows.netherite_crossbow": "Netherite Crossbow"
 }

@@ -1,0 +1,6 @@
+{
+    "parent": "item/prefix_crossbow",
+    "textures": {
+        "layer0": "item/prefix_crossbow_firework"
+    }
+}

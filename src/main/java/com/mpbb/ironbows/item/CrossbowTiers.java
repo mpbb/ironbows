@@ -3,7 +3,7 @@ package com.mpbb.ironbows.item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 
-public enum BowTiers implements BowTier {
+public enum CrossbowTiers implements BowTier {
 
 	   IRON(768, 1.0f, 1, Ingredient.of(Items.IRON_INGOT)),
 	   GOLD(576, 1.5f, 2, Ingredient.of(Items.GOLD_INGOT)),
@@ -16,7 +16,7 @@ public enum BowTiers implements BowTier {
 	   private final int enchantmentValue;
 	   private final Ingredient repairIngredient;
 
-	   private BowTiers(int uses, float damage, int enchantmentValue, Ingredient repairIngredient) {
+	   private CrossbowTiers(int uses, float damage, int enchantmentValue, Ingredient repairIngredient) {
 	      this.uses = uses;
 	      this.damage = damage;
 	      this.enchantmentValue = enchantmentValue;
