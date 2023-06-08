@@ -1,6 +1,6 @@
 {
-    "parent": "item/prefix_crossbow",
+    "parent": "ironbows:item/prefix_crossbow",
     "textures": {
-        "layer0": "item/prefix_crossbow_pulling_1"
+        "layer0": "ironbows:item/prefix_crossbow_pulling_1"
     }
 }

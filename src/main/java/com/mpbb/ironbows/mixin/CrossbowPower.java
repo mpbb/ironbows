@@ -13,9 +13,9 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 
 @Mixin(CrossbowItem.class)
-public class CrossbowArrow {
-	@Inject(method = "getShootingPower", at = @At(value = "RETURN"))
-	private float getShootingPower(ItemStack crossbowItemStack, CallbackInfoReturnable<Float> cir) {
+public class CrossbowPower {
+	@Inject(method = "getShootingPower", at = @At(value = "RETURN"), cancellable = true)
+	private static float getShootingPower(ItemStack crossbowItemStack, CallbackInfoReturnable<Float> cir) {
 		Item crossbowItem = crossbowItemStack.getItem();
 		float power = cir.getReturnValue();
 		if (crossbowItem instanceof TieredCrossbowItem tieredCrossbowItem)

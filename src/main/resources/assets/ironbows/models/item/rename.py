@@ -15,4 +15,4 @@ for f in os.listdir():
         newData = template.read()
         for p in prefixes:
             with open(f.replace("prefix", p), 'w') as newFile:
-                newFile.write(newData.replace("prefix", p).replace("item/", "ironbows:item/"))
+                newFile.write(newData.replace("prefix", p))

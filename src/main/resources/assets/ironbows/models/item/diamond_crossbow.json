@@ -1,5 +1,5 @@
 {
-    "parent": "ironbows:item/generated",
+    "parent": "item/generated",
     "textures": {
         "layer0": "ironbows:item/diamond_crossbow_standby"
     },

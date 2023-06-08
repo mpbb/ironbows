@@ -1,0 +1,25 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "a a",
+        " b ",
+        " a "
+    ],
+    "key":
+    {
+        "a":
+        {
+            "item": "minecraft:gold_ingot"
+        },
+        "b":
+        {
+            "item": "minecraft:crossbow"
+        }
+    },
+    "result":
+    {
+        "item": "ironbows:golden_crossbow",
+        "count": 1
+    }
+}
