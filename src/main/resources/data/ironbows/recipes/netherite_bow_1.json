@@ -4,10 +4,10 @@
     "item": "minecraft:netherite_ingot"
   },
   "base": {
-    "item": "minecraft:emerald_bow"
+    "item": "ironbows:emerald_bow"
   },
   "result": {
-    "item": "minecraft:netherite_bow"
+    "item": "ironbows:netherite_bow"
   },
   "template": {
     "item": "minecraft:netherite_upgrade_smithing_template"
