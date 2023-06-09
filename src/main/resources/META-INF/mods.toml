@@ -4,10 +4,10 @@ license="MIT License"
 issueTrackerURL="https://github.com/mpbb/ironbows/issues" #optional
 [[mods]]
 modId="ironbows"
-version="1.20-FORGE-1.6"
+version="1.20-FORGE-1.7"
 displayName="Iron Bows (Forge)"
 displayURL="https://github.com/mpbb/ironbows"
 logoFile="icon.png"
 credits="Popcornman200, lucam, Mr.Bananas"
 authors="Popcornman200"
-description="This mod adds new and superior bows. Iron, Golden, Diamond, Emerald and Netherite. Each bow has differences in durability and damage."
+description="This mod adds superior bows and crossbows. Iron, Golden, Diamond, Emerald and Netherite. Each bow has configurable differences in durability and damage."
