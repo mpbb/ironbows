@@ -6,3 +6,5 @@ A mod for Minecraft that adds tiered bows and crossbows.
 # Downloads
 
 Official Download Page: [https://www.curseforge.com/minecraft/mc-mods/iron-bows-forge](https://www.curseforge.com/minecraft/mc-mods/iron-bows-forge)
+# Images
+![enter image description here](https://github.com/mpbb/ironbows/blob/1.20/ironbows.JPG?raw=true)
