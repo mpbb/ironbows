@@ -4,7 +4,7 @@ license="MIT License"
 issueTrackerURL="https://github.com/mpbb/ironbows/issues" #optional
 [[mods]]
 modId="ironbows"
-version="1.20-FORGE-1.7"
+version="1.20-FORGE-1.8"
 displayName="Iron Bows (Forge)"
 displayURL="https://github.com/mpbb/ironbows"
 logoFile="icon.png"
