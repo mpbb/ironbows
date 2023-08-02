@@ -12,7 +12,7 @@ import net.minecraft.world.item.CrossbowItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 
-@Mixin(CrossbowItem.class)
+@Mixin(value = CrossbowItem.class, priority = 990)
 public class CrossbowPower {
 	@Inject(method = "getShootingPower", at = @At(value = "RETURN"), cancellable = true)
 	private static float getShootingPower(ItemStack crossbowItemStack, CallbackInfoReturnable<Float> cir) {

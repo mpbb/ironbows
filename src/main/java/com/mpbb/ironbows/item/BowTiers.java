@@ -1,10 +1,11 @@
 package com.mpbb.ironbows.item;
 
+import java.util.function.Supplier;
+
 import com.mpbb.ironbows.config.Config;
 
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraftforge.common.ForgeConfigSpec.ConfigValue;
 
 public enum BowTiers implements BowTier {
 
@@ -15,12 +16,12 @@ public enum BowTiers implements BowTier {
 	NETHERITE(Config.NETHERITE_BOW_DURABILITY, Config.NETHERITE_BOW_DAMAGE_BONUS, 2,
 			Ingredient.of(Items.NETHERITE_INGOT));
 
-	private final ConfigValue<Integer> uses;
-	private final ConfigValue<Float> damageBonus;
+	private Supplier<Integer> uses;
+	private Supplier<Double> damageBonus;
 	private final int enchantmentValue;
 	private final Ingredient repairIngredient;
 
-	private BowTiers(ConfigValue<Integer> durability, ConfigValue<Float> damageBonus, int enchantmentValue,
+	private BowTiers(Supplier<Integer> durability, Supplier<Double> damageBonus, int enchantmentValue,
 			Ingredient repairIngredient) {
 		this.uses = durability;
 		this.damageBonus = damageBonus;
@@ -29,19 +30,11 @@ public enum BowTiers implements BowTier {
 	}
 
 	public int getUses() {
-		try {
-			return this.uses.get();
-		} catch (Exception e) {
-			return this.uses.getDefault();
-		}
+		return this.uses.get().intValue();
 	}
 
 	public float getAttackDamageBonus() {
-		try {
-			return this.damageBonus.get();
-		} catch (Exception e) {
-			return this.damageBonus.getDefault();
-		}
+		return this.damageBonus.get().floatValue();
 	}
 
 	public int getEnchantmentValue() {
