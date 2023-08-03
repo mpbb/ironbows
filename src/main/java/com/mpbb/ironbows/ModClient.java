@@ -12,7 +12,7 @@ import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.CrossbowItem;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
+import net.minecraftforge.event.CreativeModeTabEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 
 @Mod.EventBusSubscriber(modid = IronBows.MODID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
@@ -27,8 +27,8 @@ public class ModClient {
 	}
 	
 	@SubscribeEvent
-	public static void buildCreativeModeTabContents(BuildCreativeModeTabContentsEvent event) {
-		if(event.getTabKey() == CreativeModeTabs.COMBAT) {
+	public static void buildCreativeModeTabContents(CreativeModeTabEvent.BuildContents event) {
+		if(event.getTab() == CreativeModeTabs.COMBAT) {
 			Items.BOWS.getEntries().forEach(bow -> event.accept(bow.get()));
 			Items.CROSSBOWS.getEntries().forEach(crossbow -> event.accept(crossbow.get()));
 		}

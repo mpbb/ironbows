@@ -1,15 +1,12 @@
 {
-  "type": "minecraft:smithing_transform",
-  "addition": {
-    "item": "minecraft:netherite_ingot"
-  },
+  "type": "minecraft:smithing",
   "base": {
-    "item": "ironbows:diamond_bow"
+      "item": "ironbows:diamond_bow"
+  },
+  "addition": {
+      "item": "minecraft:netherite_ingot"
   },
   "result": {
-    "item": "ironbows:netherite_bow"
-  },
-  "template": {
-    "item": "minecraft:netherite_upgrade_smithing_template"
+      "item": "ironbows:netherite_bow"
   }
 }
