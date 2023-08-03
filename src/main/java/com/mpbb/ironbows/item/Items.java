@@ -3,12 +3,10 @@ package com.mpbb.ironbows.item;
 import com.mpbb.ironbows.IronBows;
 
 import net.minecraft.world.item.Item;
-import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
-@Mod.EventBusSubscriber(modid = IronBows.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class Items {
 	public static final DeferredRegister<Item> BOWS = DeferredRegister.create(ForgeRegistries.ITEMS, IronBows.MODID);
 
