@@ -26,4 +26,3 @@ public class Items {
 	public static final RegistryObject<Item> EMERALD_CROSSBOW = CROSSBOWS.register("emerald_crossbow", () -> new TieredCrossbowItem(CrossbowTiers.EMERALD, new Item.Properties()));
 	public static final RegistryObject<Item> NETHERITE_CROSSBOW = CROSSBOWS.register("netherite_crossbow", () -> new TieredCrossbowItem(CrossbowTiers.NETHERITE, new Item.Properties()));
 }
-

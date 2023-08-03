@@ -8,9 +8,11 @@ import com.mpbb.ironbows.item.Items;
 
 import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.CrossbowItem;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 
 @Mod.EventBusSubscriber(modid = IronBows.MODID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
@@ -22,6 +24,14 @@ public class ModClient {
 			Items.BOWS.getEntries().forEach(item -> registerBowResourceLocations(item));
 			Items.CROSSBOWS.getEntries().forEach(item -> registerCrossbowResourceLocations(item));
 		});
+	}
+	
+	@SubscribeEvent
+	public static void buildCreativeModeTabContents(BuildCreativeModeTabContentsEvent event) {
+		if(event.getTabKey() == CreativeModeTabs.COMBAT) {
+			Items.BOWS.getEntries().forEach(bow -> event.accept(bow.get()));
+			Items.CROSSBOWS.getEntries().forEach(crossbow -> event.accept(crossbow.get()));
+		}
 	}
 
 	private static void registerBowResourceLocations(RegistryObject<Item> item) {

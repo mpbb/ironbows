@@ -1,25 +1,26 @@
 package com.mpbb.ironbows.item;
 
+import java.util.function.Supplier;
+
 import com.mpbb.ironbows.config.Config;
 
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraftforge.common.ForgeConfigSpec.ConfigValue;
 
 public enum CrossbowTiers implements BowTier {
 
-	IRON(Config.IRON_CROSSBOW_DURABILITY, Config.IRON_CROSSBOW_DAMAGE_BONUS, 1, Ingredient.of(Items.IRON_INGOT)),
-	GOLD(Config.GOLDEN_CROSSBOW_DURABILITY, Config.GOLDEN_CROSSBOW_DAMAGE_BONUS, 2, Ingredient.of(Items.GOLD_INGOT)),
-	DIAMOND(Config.DIAMOND_CROSSBOW_DURABILITY, Config.DIAMOND_CROSSBOW_DAMAGE_BONUS, 2, Ingredient.of(Items.DIAMOND)),
-	EMERALD(Config.EMERALD_CROSSBOW_DURABILITY, Config.EMERALD_CROSSBOW_DAMAGE_BONUS, 2, Ingredient.of(Items.EMERALD)),
-	NETHERITE(Config.NETHERITE_CROSSBOW_DURABILITY, Config.NETHERITE_CROSSBOW_DAMAGE_BONUS, 2, Ingredient.of(Items.NETHERITE_INGOT));
+	IRON(465 * 2, Config.IRON_CROSSBOW_DAMAGE_BONUS, 1, Ingredient.of(Items.IRON_INGOT)),
+	GOLD(465 / 6, Config.GOLDEN_CROSSBOW_DAMAGE_BONUS, 2, Ingredient.of(Items.GOLD_INGOT)),
+	DIAMOND(465 * 8, Config.DIAMOND_CROSSBOW_DAMAGE_BONUS, 2, Ingredient.of(Items.DIAMOND)),
+	EMERALD(465 * 9, Config.EMERALD_CROSSBOW_DAMAGE_BONUS, 2, Ingredient.of(Items.EMERALD)),
+	NETHERITE(465 * 12, Config.NETHERITE_CROSSBOW_DAMAGE_BONUS, 2, Ingredient.of(Items.NETHERITE_INGOT));
 
-	private final ConfigValue<Integer> uses;
-	private final ConfigValue<Float> damageBonus;
+	private final int uses;
+	Supplier<Double> damageBonus;
 	private final int enchantmentValue;
 	private final Ingredient repairIngredient;
 
-	private CrossbowTiers(ConfigValue<Integer> durability, ConfigValue<Float> damageBonus, int enchantmentValue,
+	private CrossbowTiers(int durability, Supplier<Double> damageBonus, int enchantmentValue,
 			Ingredient repairIngredient) {
 		this.uses = durability;
 		this.damageBonus = damageBonus;
@@ -28,19 +29,11 @@ public enum CrossbowTiers implements BowTier {
 	}
 
 	public int getUses() {
-		try {
-			return this.uses.get();
-		} catch (Exception e) {
-			return this.uses.getDefault();
-		}
+		return this.uses;
 	}
 
 	public float getAttackDamageBonus() {
-		try {
-			return this.damageBonus.get();
-		} catch (Exception e) {
-			return this.damageBonus.getDefault();
-		}
+		return this.damageBonus.get().floatValue();
 	}
 
 	public int getEnchantmentValue() {
