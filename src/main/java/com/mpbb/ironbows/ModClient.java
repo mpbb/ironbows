@@ -30,7 +30,7 @@ public class ModClient {
 	public static void buildCreativeModeTabContents(BuildCreativeModeTabContentsEvent event) {
 		if(event.getTabKey() == CreativeModeTabs.COMBAT) {
 			Items.BOWS.getEntries().forEach(bow -> event.accept(bow.get()));
-			Items.CROSSBOWS.getEntries().forEach(bow -> event.accept(bow.get()));
+			Items.CROSSBOWS.getEntries().forEach(crossbow -> event.accept(crossbow.get()));
 		}
 	}
 

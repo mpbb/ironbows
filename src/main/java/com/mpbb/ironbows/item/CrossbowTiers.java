@@ -9,18 +9,18 @@ import net.minecraft.world.item.crafting.Ingredient;
 
 public enum CrossbowTiers implements BowTier {
 
-	IRON(Config.IRON_CROSSBOW_DURABILITY, Config.IRON_CROSSBOW_DAMAGE_BONUS, 1, Ingredient.of(Items.IRON_INGOT)),
-	GOLD(Config.GOLDEN_CROSSBOW_DURABILITY, Config.GOLDEN_CROSSBOW_DAMAGE_BONUS, 2, Ingredient.of(Items.GOLD_INGOT)),
-	DIAMOND(Config.DIAMOND_CROSSBOW_DURABILITY, Config.DIAMOND_CROSSBOW_DAMAGE_BONUS, 2, Ingredient.of(Items.DIAMOND)),
-	EMERALD(Config.EMERALD_CROSSBOW_DURABILITY, Config.EMERALD_CROSSBOW_DAMAGE_BONUS, 2, Ingredient.of(Items.EMERALD)),
-	NETHERITE(Config.NETHERITE_CROSSBOW_DURABILITY, Config.NETHERITE_CROSSBOW_DAMAGE_BONUS, 2, Ingredient.of(Items.NETHERITE_INGOT));
+	IRON(465 * 2, Config.IRON_CROSSBOW_DAMAGE_BONUS, 1, Ingredient.of(Items.IRON_INGOT)),
+	GOLD(465 / 6, Config.GOLDEN_CROSSBOW_DAMAGE_BONUS, 2, Ingredient.of(Items.GOLD_INGOT)),
+	DIAMOND(465 * 8, Config.DIAMOND_CROSSBOW_DAMAGE_BONUS, 2, Ingredient.of(Items.DIAMOND)),
+	EMERALD(465 * 9, Config.EMERALD_CROSSBOW_DAMAGE_BONUS, 2, Ingredient.of(Items.EMERALD)),
+	NETHERITE(465 * 12, Config.NETHERITE_CROSSBOW_DAMAGE_BONUS, 2, Ingredient.of(Items.NETHERITE_INGOT));
 
-	Supplier<Integer> uses;
+	private final int uses;
 	Supplier<Double> damageBonus;
 	private final int enchantmentValue;
 	private final Ingredient repairIngredient;
 
-	private CrossbowTiers(Supplier<Integer> durability, Supplier<Double> damageBonus, int enchantmentValue,
+	private CrossbowTiers(int durability, Supplier<Double> damageBonus, int enchantmentValue,
 			Ingredient repairIngredient) {
 		this.uses = durability;
 		this.damageBonus = damageBonus;
@@ -29,7 +29,7 @@ public enum CrossbowTiers implements BowTier {
 	}
 
 	public int getUses() {
-		return this.uses.get().intValue();
+		return this.uses;
 	}
 
 	public float getAttackDamageBonus() {
