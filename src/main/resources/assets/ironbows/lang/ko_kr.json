@@ -1,0 +1,14 @@
+{
+	"item.ironbows.iron_bow": "철 활",
+	"item.ironbows.golden_bow": "금 활",
+	"item.ironbows.diamond_bow": "다이아몬드 활",
+	"item.ironbows.emerald_bow": "에메랄드 활",
+	"item.ironbows.netherite_bow": "네더라이트 활",
+	"item.ironbows.damage_tooltip": "발사체 피해",
+	
+	"item.ironbows.iron_crossbow": "철 쇠뇌",
+	"item.ironbows.golden_crossbow": "금 쇠뇌",
+	"item.ironbows.diamond_crossbow": "다이아몬드 쇠뇌",
+	"item.ironbows.emerald_crossbow": "에메랄드 쇠뇌",
+	"item.ironbows.netherite_crossbow": "네더라이트 쇠뇌"
+}
