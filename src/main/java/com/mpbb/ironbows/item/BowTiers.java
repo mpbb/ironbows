@@ -17,11 +17,11 @@ public enum BowTiers implements BowTier {
 			Ingredient.of(Items.NETHERITE_INGOT));
 
 	private final int uses;
-	private Supplier<Double> damageBonus;
+	private Supplier<Float> damageBonus;
 	private final int enchantmentValue;
 	private final Ingredient repairIngredient;
 
-	private BowTiers(int durability, Supplier<Double> damageBonus, int enchantmentValue,
+	private BowTiers(int durability, Supplier<Float> damageBonus, int enchantmentValue,
 			Ingredient repairIngredient) {
 		this.uses = durability;
 		this.damageBonus = damageBonus;

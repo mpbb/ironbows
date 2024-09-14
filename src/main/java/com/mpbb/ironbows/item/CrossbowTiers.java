@@ -16,11 +16,11 @@ public enum CrossbowTiers implements BowTier {
 	NETHERITE(465 * 12, Config.NETHERITE_CROSSBOW_DAMAGE_BONUS, 2, Ingredient.of(Items.NETHERITE_INGOT));
 
 	private final int uses;
-	Supplier<Double> damageBonus;
+	Supplier<Float> damageBonus;
 	private final int enchantmentValue;
 	private final Ingredient repairIngredient;
 
-	private CrossbowTiers(int durability, Supplier<Double> damageBonus, int enchantmentValue,
+	private CrossbowTiers(int durability, Supplier<Float> damageBonus, int enchantmentValue,
 			Ingredient repairIngredient) {
 		this.uses = durability;
 		this.damageBonus = damageBonus;

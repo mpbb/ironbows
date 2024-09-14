@@ -1,21 +1,22 @@
 package com.mpbb.ironbows.config;
 
 import net.minecraftforge.common.ForgeConfigSpec;
+import net.minecraftforge.common.ForgeConfigSpec.ConfigValue;
 
 public class Config {
 		public static final ForgeConfigSpec.Builder BUILDER = new ForgeConfigSpec.Builder();
 		
-		public static final ForgeConfigSpec.ConfigValue<Double> IRON_BOW_DAMAGE_BONUS;
-		public static final ForgeConfigSpec.ConfigValue<Double> GOLDEN_BOW_DAMAGE_BONUS;
-		public static final ForgeConfigSpec.ConfigValue<Double> DIAMOND_BOW_DAMAGE_BONUS;
-		public static final ForgeConfigSpec.ConfigValue<Double> EMERALD_BOW_DAMAGE_BONUS;
-		public static final ForgeConfigSpec.ConfigValue<Double> NETHERITE_BOW_DAMAGE_BONUS;
+		public static final ConfigValue<Float> IRON_BOW_DAMAGE_BONUS;
+		public static final ConfigValue<Float> GOLDEN_BOW_DAMAGE_BONUS;
+		public static final ConfigValue<Float> DIAMOND_BOW_DAMAGE_BONUS;
+		public static final ConfigValue<Float> EMERALD_BOW_DAMAGE_BONUS;
+		public static final ConfigValue<Float> NETHERITE_BOW_DAMAGE_BONUS;
 		
-		public static final ForgeConfigSpec.ConfigValue<Double> IRON_CROSSBOW_DAMAGE_BONUS;
-		public static final ForgeConfigSpec.ConfigValue<Double> GOLDEN_CROSSBOW_DAMAGE_BONUS;
-		public static final ForgeConfigSpec.ConfigValue<Double> DIAMOND_CROSSBOW_DAMAGE_BONUS;
-		public static final ForgeConfigSpec.ConfigValue<Double> EMERALD_CROSSBOW_DAMAGE_BONUS;
-		public static final ForgeConfigSpec.ConfigValue<Double> NETHERITE_CROSSBOW_DAMAGE_BONUS;
+		public static final ConfigValue<Float> IRON_CROSSBOW_DAMAGE_BONUS;
+		public static final ConfigValue<Float> GOLDEN_CROSSBOW_DAMAGE_BONUS;
+		public static final ConfigValue<Float> DIAMOND_CROSSBOW_DAMAGE_BONUS;
+		public static final ConfigValue<Float> EMERALD_CROSSBOW_DAMAGE_BONUS;
+		public static final ConfigValue<Float> NETHERITE_CROSSBOW_DAMAGE_BONUS;
 
 		static
 		{

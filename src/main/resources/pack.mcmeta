@@ -1,8 +1,6 @@
 {
-    "pack": {
-        "description": "Resources for Iron Bows mod.",
-        "pack_format": 9,
-        "forge:resource_pack_format": 8,
-        "forge:data_pack_format": 9
-    }
+  "pack": {
+    "description": "${mod_id} resources",
+    "pack_format": 34
+  }
 }

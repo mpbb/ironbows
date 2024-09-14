@@ -1,13 +1,13 @@
 modLoader="javafml"
-loaderVersion="[47,)"
-license="MIT License"
-issueTrackerURL="https://github.com/mpbb/ironbows/issues" #optional
+loaderVersion="${loader_version_range}"
+license="${mod_license}"
+issueTrackerURL="https://github.com/mpbb/ironbows/issues"
 [[mods]]
-modId="ironbows"
-version="1.20.1-FORGE-1.10"
-displayName="Iron Bows (Forge)"
+modId="${mod_id}"
+version="${mod_version}"
+displayName="${mod_name}"
 displayURL="https://github.com/mpbb/ironbows"
 logoFile="icon.png"
 credits="Popcornman200, lucam, Mr.Bananas"
-authors="Popcornman200"
-description="This mod adds superior bows and crossbows. Iron, Golden, Diamond, Emerald and Netherite. Each bow has configurable damage."
+authors="${mod_authors}"
+description='''${mod_description}'''

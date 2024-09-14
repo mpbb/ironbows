@@ -4,10 +4,10 @@ import java.util.List;
 
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
+import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.item.CrossbowItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
-import net.minecraft.world.level.Level;
 
 public class TieredCrossbowItem extends CrossbowItem {
 	private final BowTier tier;
@@ -22,6 +22,12 @@ public class TieredCrossbowItem extends CrossbowItem {
 	}
 	
 	@Override
+	public AbstractArrow customArrow(AbstractArrow arrow) {
+		arrow.setBaseDamage(arrow.getBaseDamage() + this.tier.getAttackDamageBonus());
+		return arrow;
+	}
+	
+	@Override
 	public int getEnchantmentValue() {
 		return this.tier.getEnchantmentValue();
 	}
@@ -32,10 +38,10 @@ public class TieredCrossbowItem extends CrossbowItem {
 	}
 	
 	@Override
-	public void appendHoverText(ItemStack p_41421_, Level p_41422_, List<Component> p_41423_, TooltipFlag p_41424_) {
-		p_41423_.add(Component.literal("+" + Float.toString(this.tier.getAttackDamageBonus()) + " ")
+	public void appendHoverText(ItemStack p_40880_, TooltipContext p_333751_, List<Component> p_40882_, TooltipFlag p_40883_) {
+		p_40882_.add(Component.literal("+" + Float.toString(this.tier.getAttackDamageBonus()) + " ")
 				.append(Component.translatable("item.ironbows.damage_tooltip"))
 				.withStyle(ChatFormatting.DARK_GREEN));
-		super.appendHoverText(p_41421_, p_41422_, p_41423_, p_41424_);
+		super.appendHoverText(p_40880_, p_333751_, p_40882_, p_40883_);
 	}
 }
