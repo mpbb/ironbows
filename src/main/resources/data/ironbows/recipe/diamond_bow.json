@@ -10,7 +10,7 @@
     {
         "a":
         {
-            "item": "minecraft:emerald"
+            "item": "minecraft:diamond"
         },
         "b":
         {
@@ -19,7 +19,7 @@
     },
     "result":
     {
-        "item": "ironbows:emerald_bow",
+        "id": "ironbows:diamond_bow",
         "count": 1
     }
 }

@@ -10,7 +10,7 @@
     {
         "a":
         {
-            "item": "minecraft:iron_ingot"
+            "item": "minecraft:gold_ingot"
         },
         "b":
         {
@@ -19,7 +19,7 @@
     },
     "result":
     {
-        "item": "ironbows:iron_bow",
+        "id": "ironbows:golden_bow",
         "count": 1
     }
 }

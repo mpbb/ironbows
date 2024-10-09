@@ -2,24 +2,24 @@
     "type": "minecraft:crafting_shaped",
     "pattern":
     [
-        " a ",
-        "ab ",
+        "a a",
+        " b ",
         " a "
     ],
     "key":
     {
         "a":
         {
-            "item": "minecraft:diamond"
+            "item": "minecraft:gold_ingot"
         },
         "b":
         {
-            "item": "minecraft:bow"
+            "item": "minecraft:crossbow"
         }
     },
     "result":
     {
-        "item": "ironbows:diamond_bow",
+        "id": "ironbows:golden_crossbow",
         "count": 1
     }
 }

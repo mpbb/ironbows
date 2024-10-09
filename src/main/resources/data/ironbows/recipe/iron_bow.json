@@ -2,8 +2,8 @@
     "type": "minecraft:crafting_shaped",
     "pattern":
     [
-        "a a",
-        " b ",
+        " a ",
+        "ab ",
         " a "
     ],
     "key":
@@ -14,12 +14,12 @@
         },
         "b":
         {
-            "item": "minecraft:crossbow"
+            "item": "minecraft:bow"
         }
     },
     "result":
     {
-        "item": "ironbows:iron_crossbow",
+        "id": "ironbows:iron_bow",
         "count": 1
     }
 }
